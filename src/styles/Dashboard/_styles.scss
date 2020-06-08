@@ -1,0 +1,251 @@
+.section-form {
+  max-width: 960px;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+#result {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-result {
+  background: #F2F2F2;
+}
+
+h1 {
+  font-size: 55px;
+  color: #0B2A1E;
+  max-width: 490px;
+  line-height: 67px;
+  margin-top: 40px;
+}
+
+form {
+  margin-top: 46px;
+  margin-bottom: 83px;
+  display: flex;
+  color: #A8A8A8;
+
+  @media (max-width: 850px) {
+    flex-wrap: wrap;
+  }
+
+  div {
+    padding-top: 20px;
+    flex: 1 1 220px;
+
+    @media (min-width: 480px) {
+      & {
+        max-width: 219px;
+        margin-right: 80px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+
+  }
+
+  img {
+    height: 75px;
+  }
+
+  p {
+    margin-top: 15px;
+    color: #848484;
+    @media (max-width: 700px) {
+      max-width: 220px;
+    }
+  }
+
+  select {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #A8A8A8;
+    box-sizing: border-box;
+    border-radius: 19px;
+    background: url('/assets/arrow-down.png') 95% no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    color: #A8A8A8;
+    padding-left: 20px;
+  }
+}
+
+.message {
+  padding: 135px 40px 135px 0;
+
+  h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    color: #A9A9A9;
+  }
+
+  p {
+    text-align: left;
+    margin-top: 15px;
+    max-width: 220px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    color: #A9A9A9;
+  }
+}
+
+.illustration {
+  padding-top: 22px;
+
+  @media (max-width: 450px) {
+    img {
+      width: 260px;
+    }
+  }
+
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px 20px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+#show-results {
+  max-width: 960px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: none;
+
+  .cards {
+    width: 100%;
+    margin-top: 68px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    padding-bottom: 20px;
+    background: #FFF;
+    max-width: 268px;
+    max-height: 284px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+
+    .img-plant {
+      width: 100%;
+      text-align: center;
+      padding-left: 35px;
+    }
+
+    img {
+      max-width: 200px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 28px;
+      color: #1E6B4E;
+
+      padding-left: 32px;
+    }
+
+    div {
+      display: flex;
+
+      p {
+        width: 100%;
+      }
+
+      .icons {
+        img {
+          & + img {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  div {
+    width: 100%;
+
+    a {
+      color: #196146;
+      border: 1px solid #15573F;
+      box-sizing: border-box;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: #196146;
+        color: #FFFFFF;
+      }
+
+      @media (max-width: 650px) {
+        padding: 15px 25%;
+      }
+
+      @media (min-width: 650px) {
+        padding: 15px 35%;
+      }
+
+      img {
+        height: 15px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+}

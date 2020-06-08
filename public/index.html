@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Green Thumb</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="root">
+    <section class="section-form" id="top">
+        <img src="assets/logo.svg" alt="Green Thumb"/>
+        <h1>Find your next green friend</h1>
+        <form id="frm-">
+            <div>
+                <img src="assets/sun.svg" alt="Sun"/>
+                <p>
+                    <strong>1.</strong> Set the amount of <strong>sunlight</strong> your plant will get.
+                </p>
+                <label>
+                    <select id="select-sun">
+                        <option value="" disabled="disabled" selected="selected">Select..</option>
+                        <option value="high">High</option>
+                        <option value="low">Low</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <img src="assets/wateringcan.svg" alt="Watering can"/>
+                <p>
+                    <strong>2.</strong> How often do you want to <strong>water</strong> your plant?
+                </p>
+
+                <label>
+                    <select id="select-water">
+                        <option value="" disabled="disabled" selected="selected">Select..</option>
+                        <option value="daily">Daily</option>
+                        <option value="regularly">Regularly</option>
+                        <option value="rarely">Rarely</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <img src="assets/dog.svg" alt="Dog">
+                <p>
+                    <strong>3.</strong> Do you have pets? Do they <strong>chew</strong> plants?
+                </p>
+                <label>
+                    <select id="select-dog">
+                        <option value="" disabled="disabled" selected="selected">Select..</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </label>
+            </div>
+        </form>
+    </section>
+    <section class="section-result">
+        <div id="show-results">
+            <img src="assets/pick.svg" alt="Green Thumb"/>
+            <h1>Our picks for you</h1>
+
+            <div class="cards" id="cards">
+
+            </div>
+
+            <div>
+                <a href="#top">
+                    <img src="assets/seta.svg" alt="Back to the top" />
+                    back to the top
+                </a>
+            </div>
+
+
+        </div>
+        <div id="result">
+            <div id="message" class="message">
+                <h1>No results yet...</h1>
+                <p>Use the filter above to find the plant that best fits your environment :)</p>
+            </div>
+            <div id="illustration" class="illustration">
+                <img src="assets/illustration.svg" alt="Plants"/>
+            </div>
+        </div>
+    </section>
+
+    <div id="toast"></div>
+</div>
+<script src="./bundle.js"></script>
+</body>
+</html>

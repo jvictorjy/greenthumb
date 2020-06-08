@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body, input, button, select {
+  font: 14px Montserrat, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  margin: 0 auto;
+}
